@@ -11,7 +11,8 @@ export const EmblaCarousel = () => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         <div className="embla__slide">
-            <Image src={Cameron} alt="" height={50} width={50}/>
+            <Image src={Cameron} alt="" height={150} width={150}/>
+            <p>Cameron</p>
         </div>
         <div className="embla__slide">Slide 2</div>
         <div className="embla__slide">Slide 3</div>
