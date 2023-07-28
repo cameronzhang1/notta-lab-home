@@ -2,7 +2,7 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import Cameron from "../../public/img/Cameron.jpg"
+import Cameron from "../../public/images/Cameron.jpg"
 
 export const EmblaCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
