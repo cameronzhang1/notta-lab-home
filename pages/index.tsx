@@ -1,41 +1,19 @@
-import Image from "next/image";
-import nottaLabPic from "../public/20210831_NottaLabs.jpg";
-import logo from "../public/logo.png";
 import EmblaCarousel from "./components/carousel";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between`}>
-      <div style={{ position: "relative" }}>
-        <Image
-          src={logo}
-          alt="Picture of the Notta Lab team"
-          height={100}
-          width={100}
-          style={{
-            position: "absolute",
-            transform: "translate(50%, 50%)", // To center the text properly
-          }}
-        />
-        <Image
-          src={nottaLabPic}
-          alt="Picture of the Notta Lab team"
-          className="w-full h-auto"
-          style={{ filter: "brightness(60%)" }}
-        />
-        <h1 
-          style={{
-            position: "absolute",
-            top: "50%", // Adjust this value to vertically center the text
-            left: "50%", // Adjust this value to horizontally center the text
-            transform: "translate(-50%, -50%)", // To center the text properly
-            color: "#fff", // Text color
-            fontSize: "9rem",
-          }}
-        >
-          Notta Lab
-        </h1>
+      <ParallaxBanner
+      layers={[
+        { image: "/images/20210831_NottaLabs.jpg", speed: -20 },
+      ]}
+      className="aspect-[2.7/1]"
+    >
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-9xl text-white font-bold">Notta Lab</h1>
       </div>
+    </ParallaxBanner>
 
       <div className="flex min-h-screen flex-col items-center justify-between mx-60 my-10">
         <p style={{ fontSize: "1.2rem" }}>
