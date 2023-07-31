@@ -16,7 +16,7 @@ export default function Home() {
     <main className={`flex min-h-screen flex-col justify-between`}>
       <ParallaxBanner
         layers={[
-          { image: "/images/20210831_NottaLabs.jpg", speed: -20 },
+          { image: "/images/20210831_NottaLabs.jpg", speed: -10 },
           {
             /* TODO: darken image */
           },
@@ -28,25 +28,27 @@ export default function Home() {
         </div>
       </ParallaxBanner>
       <div className="flex flex-col justify-center my-10 mx-60">
-        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2 id="about" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           About Us
         </h2>
         <hr className="my-1" />
         <p className="leading-7 [&:not(:first-child)]:mt-6">
           The Notta Lab is located in the Princess Margaret Cancer Research
           Centre, affiliated with the Department of Medical Biophysics at the
-          University of Toronto. Our lab is part of the <a
-                href="https://oicr.on.ca/research-portfolio/pancurx/"
-                className="font-medium text-primary underline underline-offset-4"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Pancreatic Cancer Translational Research Initiative (PanCuRx)
-              </a> at the Ontario Institute for Cancer Research. The
-          Notta Lab has made important contributions to the understanding of
-          pancreatic cancer evolution and disease subtypes. Our lab employs
-          genomic, cell biology and single-cell approaches to decipher new
-          molecular targets needed to treat pancreatic cancer.
+          University of Toronto. Our lab is part of the{" "}
+          <a
+            href="https://oicr.on.ca/research-portfolio/pancurx/"
+            className="font-medium text-primary underline underline-offset-4"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Pancreatic Cancer Translational Research Initiative (PanCuRx)
+          </a>{" "}
+          at the Ontario Institute for Cancer Research. The Notta Lab has made
+          important contributions to the understanding of pancreatic cancer
+          evolution and disease subtypes. Our lab employs genomic, cell biology
+          and single-cell approaches to decipher new molecular targets needed to
+          treat pancreatic cancer.
         </p>
         {/* TODO: is it acceptable to add a carousel for staff and alumni*/}
         {/* {<EmblaCarousel />} */}
@@ -66,7 +68,7 @@ export default function Home() {
           pancreatic cancer through diverse experimental models and high-quality
           bioinformatics.
         </p>
-        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2 id="publications" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
           Publications
         </h2>
         <hr className="my-1" />
@@ -263,7 +265,7 @@ export default function Home() {
             </CardHeader>
           </Card>
         </div>
-        <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
+        <h2 id="team" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
           The Notta Lab Team
         </h2>
         <hr className="my-1" />
@@ -303,6 +305,16 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <h2 id="contact" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+            Contact Us
+          </h2>
+          <hr className="my-1" />
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
+            We are always seeking motivated post-docs and young scientists to
+            join our lab. If you are interested in genomics, cancer development,
+            and therapy resistance, and have wet lab or bioinformatics
+            experience, please send your CV and a brief cover letter to faiyaz.notta@gmail.com.
+          </p>
       </div>
     </main>
   );
