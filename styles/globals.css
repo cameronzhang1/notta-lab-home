@@ -98,13 +98,12 @@ header{
   z-index: 30;
   top: 0;
 }
-
 nav{
   display: flex;
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .nav__menu-bar{
   display: flex;
@@ -119,20 +118,20 @@ nav{
   border-radius: 2px;
 }
 .nav__menu-list{
-  /* TODO: align left */
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 60px;
-  /* width: 288px; */
-  /* row-gap: 24px; */
-  /* right: -288px; */
+  width: 288px;
+  row-gap: 24px;
+  right: -288px;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
+  background-color: #fff;
 }
 .nav__menu-list.active{
-  /* right: 0; */
+  right: 0;
 }
 .nav__link{
   font-size: 18px; 

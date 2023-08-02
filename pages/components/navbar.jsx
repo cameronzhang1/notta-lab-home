@@ -17,9 +17,9 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`nav drop-shadow-md`}>
+      <nav className={"nav drop-shadow-md"}>
         <Link href={"/"} className= "mx-10">
-          <Image src={Logo} height={50}width={50}alt="Notta Lab" />
+          <Image src={Logo} height={50}width={50}alt="Notta Lab" className="max-w-xs transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30"/>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}

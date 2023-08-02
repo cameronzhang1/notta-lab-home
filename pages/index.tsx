@@ -1,4 +1,4 @@
-import EmblaCarousel from "./components/carousel";
+import TeamCard from "./components/teamcard";
 import Link from "next/link";
 import Image from "next/image";
 import Faiyaz from "../public/images/pancurx-faiyaz.jpg";
@@ -10,13 +10,14 @@ import {
   CardTitle,
 } from "./components/shadcn/card";
 import { Button } from "./components/shadcn/button";
+import Publication from "./components/publication";
 
 export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col justify-between`}>
       <ParallaxBanner
         layers={[
-          { image: "/images/20210831_NottaLabs.jpg", speed: -10 },
+          { image: "/images/20210831_NottaLabs.jpg", speed: -20 },
           {
             /* TODO: darken image */
           },
@@ -28,7 +29,10 @@ export default function Home() {
         </div>
       </ParallaxBanner>
       <div className="flex flex-col justify-center my-10 mx-60">
-        <h2 id="about" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2
+          id="about"
+          className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+        >
           About Us
         </h2>
         <hr className="my-1" />
@@ -51,7 +55,7 @@ export default function Home() {
           treat pancreatic cancer.
         </p>
         {/* TODO: is it acceptable to add a carousel for staff and alumni*/}
-        {/* {<EmblaCarousel />} */}
+        {/* <EmblaCarousel /> */}
         <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
           Our Research
         </h2>
@@ -68,214 +72,97 @@ export default function Home() {
           pancreatic cancer through diverse experimental models and high-quality
           bioinformatics.
         </p>
-        <h2 id="publications" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2
+          id="publications"
+          className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+        >
           Publications
         </h2>
         <hr className="my-1" />
         <div className="grid grid-cols-2 gap-4 my-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://aacrjournals.org/clincancerres/article/26/18/4901/9541/GATA6-Expression-Distinguishes-Classical-and-Basal"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GATA6 Expression Distinguishes Classical and Basal-like
-                    Subtypes in Advanced Pancreatic Cancer
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                O’Kane GM et al. Clin Cancer Research (2020)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://www.nature.com/articles/s41588-019-0566-9"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Transcription phenotypes of pancreatic cancer are driven by
-                    genomic events during tumor evolution
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Chan-Seng-Yue M, Kim JC, et al. Nat Genetics (2020)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://www.nature.com/articles/s41375-019-0546-1"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Cryptic genomic lesions in adverse-risk acute myeloid
-                    leukemia identified by integrated whole genome and
-                    transcriptome sequencing
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Kim JC et al. Leukemia (2020)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://gut.bmj.com/content/69/2/317.long"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Morphological classification of pancreatic ductal
-                    adenocarcinoma that predicts molecular subtypes and
-                    correlates with clinical outcome
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Kalimuthu S et al. Gut (2019)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://cancerdiscovery.aacrjournals.org/content/8/9/1112.long"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Organoid Profiling Identifies Common Responders to
-                    Chemotherapy in Pancreatic Cancer
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Tiriac H et al. Cancer Discovery (2018)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://clincancerres.aacrjournals.org/content/24/6/1344.long"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Genomics-Driven Precision Medicine for Advanced Pancreatic
-                    Cancer: Early Results from the COMPASS Trial
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Aung KL. et al. Clin Cancer Research (2018)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://gut.bmj.com/content/66/12/2170.long"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    A genetic roadmap of pancreatic cancer: still evolving
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Notta F. et al. Gut (2017)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://www.nature.com/articles/nature19823"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    A renewed model of pancreatic cancer evolution based on
-                    genomic rearrangement patterns
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Notta F. et al. Nature (2016)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://science.sciencemag.org/content/351/6269/aab2116.long"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Distinct routes of lineage development reshape the human
-                    blood hierarchy across ontogeny
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Notta F. et al. Science (2016)
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>
-                <Button variant="link" asChild>
-                  <Link
-                    href="https://www.nature.com/articles/nature09733"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Evolution of human BCR-ABL1 lymphoblastic
-                    leukaemia-initiating cells
-                  </Link>
-                </Button>
-              </CardTitle>
-              <CardDescription className="text-right">
-                Notta F. et al Nature (2011)
-              </CardDescription>
-            </CardHeader>
-          </Card>
+          <Publication
+            href="https://aacrjournals.org/clincancerres/article/26/18/4901/9541/GATA6-Expression-Distinguishes-Classical-and-Basal"
+            title={
+              "GATA6 Expression Distinguishes Classical and Basal-like Subtypes in Advanced Pancreatic Cancer"
+            }
+            authors={"O’Kane GM et al. Clin Cancer Research (2020)"}
+          />
+          <Publication
+            href="https://www.nature.com/articles/s41588-019-0566-9"
+            title={
+              "Transcription phenotypes of pancreatic cancer are driven by genomic events during tumor evolution"
+            }
+            authors={"Chan-Seng-Yue M, Kim JC, et al. Nat Genetics (2020)"}
+          />
+          <Publication
+            href="https://www.nature.com/articles/s41375-019-0546-1"
+            title={
+              "Cryptic genomic lesions in adverse-risk acute myeloid leukemia identified by integrated whole genome and transcriptome sequencing"
+            }
+            authors={"Kalimuthu S et al. Gut (2019)"}
+          />
+          <Publication
+            href="https://gut.bmj.com/content/69/2/317.long"
+            title={
+              "Morphological classification of pancreatic ductal adenocarcinoma that predicts molecular subtypes and correlates with clinical outcome"
+            }
+            authors={"Kim JC et al. Leukemia (2020)"}
+          />
+          <Publication
+            href="https://cancerdiscovery.aacrjournals.org/content/8/9/1112.long"
+            title={
+              "Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer"
+            }
+            authors={"Tiriac H et al. Cancer Discovery (2018)"}
+          />
+          <Publication
+            href="https://clincancerres.aacrjournals.org/content/24/6/1344.long"
+            title={
+              "Genomics-Driven Precision Medicine for Advanced Pancreatic Cancer: Early Results from the COMPASS Trial"
+            }
+            authors={"Aung KL. et al. Clin Cancer Research (2018)"}
+          />
+          <Publication
+            href="https://gut.bmj.com/content/66/12/2170.long"
+            title={"A genetic roadmap of pancreatic cancer: still evolving"}
+            authors={"Notta F. et al. Gut (2017)"}
+          />
+          <Publication
+            href="https://www.nature.com/articles/nature19823"
+            title={
+              "A renewed model of pancreatic cancer evolution based on genomic rearrangement patterns"
+            }
+            authors={"Notta F. et al. Science (2016)"}
+          />
+          <Publication
+            href="https://science.sciencemag.org/content/351/6269/aab2116.long"
+            title={
+              "Distinct routes of lineage development reshape the humanblood hierarchy across ontogeny"
+            }
+            authors={"Notta F. et al. Science (2016)"}
+          />
+          <Publication
+            href="https://www.nature.com/articles/nature09733"
+            title={
+              "Evolution of human BCR-ABL1 lymphoblastic leukaemia-initiating cells"
+            }
+            authors={"Notta F. et al Nature (2011)"}
+          />
         </div>
-        <h2 id="team" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
+        <h2
+          id="team"
+          className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10"
+        >
           The Notta Lab Team
         </h2>
         <hr className="my-1" />
-        <div className="grid grid-cols-2 gap-4 my-6">
+        <div className="grid grid-cols-2 gap-4 my-6 justify-center">
           <Image
             src={Faiyaz}
             height={463}
             width={343}
             alt="Faiyaz Notta"
-            className="rounded-md object-cover"
+            className="max-w-xs rounded-md object-cover transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30"
           />
           <div>
             <h3 className="text-2xl font-semibold">
@@ -305,16 +192,53 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <h2 id="contact" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-            Contact Us
-          </h2>
-          <hr className="my-1" />
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
-            We are always seeking motivated post-docs and young scientists to
-            join our lab. If you are interested in genomics, cancer development,
-            and therapy resistance, and have wet lab or bioinformatics
-            experience, please send your CV and a brief cover letter to faiyaz.notta@gmail.com.
-          </p>
+      </div>
+      <div className="mx-5 columns-5">
+        <TeamCard
+          name="Cameron Zhang"
+          image="/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
+        <TeamCard
+          name="Amanda Oliver"
+          image="public/images/Cameron.jpg"
+          bio="this is my biography"
+        />
       </div>
     </main>
   );
