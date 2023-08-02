@@ -193,19 +193,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mx-5 columns-5">
+      <div className="mx-5 columns-3">
         <TeamCard
           name="Cameron Zhang"
           image="/images/Cameron.jpg"
           bio="this is my biography"
         />
         <TeamCard
-          name="Amanda Oliver"
+          name="Karen Ng"
           image="public/images/Cameron.jpg"
           bio="this is my biography"
         />
         <TeamCard
-          name="Amanda Oliver"
+          name="Eugenia Flores"
           image="public/images/Cameron.jpg"
           bio="this is my biography"
         />
