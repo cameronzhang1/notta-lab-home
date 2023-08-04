@@ -7,7 +7,7 @@ import {
 import { Button } from "../components/shadcn/button";
 import Link from "next/link";
 
-export default function Publication({ href, title, authors }) {
+export default function Publication({ href, title, authors } : { href: string, title: string, authors: string }) {
   return (
       <Card className="object-cover transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
         <CardHeader>

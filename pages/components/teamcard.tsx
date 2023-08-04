@@ -1,6 +1,6 @@
 
 
-export default function TeamCard({ name, image, bio }) {
+export default function TeamCard({ name, image, bio } : { name: string, image: string, bio: string }) {
   return (
     <div className="overflow-hidden my-5 aspect-video bg-red-400 cursor-pointer rounded-xl relative group">
       <div className="rounded-xl z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute from-black/80 to-transparent bg-gradient-to-t inset-x-0 -bottom-2 pt-30 text-white flex items-end">
