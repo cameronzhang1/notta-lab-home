@@ -1,4 +1,4 @@
-import TeamCard from "./components/teamcard";
+import TeamCard from "../components/teamcard";
 import Link from "next/link";
 import Image from "next/image";
 import Faiyaz from "../public/images/pancurx-faiyaz.jpg";
@@ -8,9 +8,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./components/shadcn/card";
-import { Button } from "./components/shadcn/button";
-import Publication from "./components/publication";
+} from "../components/shadcn/card";
+import { Button } from "../components/shadcn/button";
+import Publication from "../components/publication";
 
 export default function Home() {
   return (

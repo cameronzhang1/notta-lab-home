@@ -3,8 +3,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../components/shadcn/card";
-import { Button } from "../components/shadcn/button";
+} from "./shadcn/card";
+import { Button } from "./shadcn/button";
 import Link from "next/link";
 
 export default function Publication({ href, title, authors } : { href: string, title: string, authors: string }) {

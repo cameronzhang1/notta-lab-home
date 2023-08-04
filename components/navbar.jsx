@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/images/main-logo.png";
+import Logo from "../public/images/main-logo.png";
 import NavItem from "./navitem";
 
 const MENU_LIST = [
