@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Publication({ href, title, authors } : { href: string, title: string, authors: string }) {
   return (
-      <Card className="object-cover transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30">
+      <Card className="object-cover transition duration-300 ease-in-out hover:shadow-2xl dark:hover:shadow-black/30">
         <CardHeader>
           <CardTitle>
             <Button variant="link" asChild>

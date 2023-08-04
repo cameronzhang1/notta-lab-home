@@ -1,15 +1,7 @@
 import TeamCard from "../components/teamcard";
-import Link from "next/link";
 import Image from "next/image";
 import Faiyaz from "../public/images/pancurx-faiyaz.jpg";
 import { ParallaxBanner } from "react-scroll-parallax";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../components/shadcn/card";
-import { Button } from "../components/shadcn/button";
 import Publication from "../components/publication";
 
 export default function Home() {
@@ -156,15 +148,11 @@ export default function Home() {
           The Notta Lab Team
         </h2>
         <hr className="my-1" />
-        <div className="grid grid-cols-2 gap-4 my-6 justify-center">
-          <Image
-            src={Faiyaz}
-            height={463}
-            width={343}
-            alt="Faiyaz Notta"
-            className="max-w-xs rounded-md object-cover transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30"
-          />
-          <div>
+        <div className="my-5">
+          <div className="float-left mx-10">
+            <Image src={Faiyaz} height={463} width={343} alt="Faiyaz Notta" className="rounded-md"/>
+          </div>
+          <div className="my-5">
             <h3 className="text-2xl font-semibold">
               Faiyaz Notta - Principal Investigator
             </h3>
@@ -193,51 +181,73 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mx-5 columns-3">
+      <div className="grid grid-cols-5">
         <TeamCard
           name="Cameron Zhang"
           image="/images/Cameron.jpg"
-          bio="this is my biography"
+          bio="Undergraduate Student"
         />
+        {/* Post-Docs and staff */}
         <TeamCard
           name="Karen Ng"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          image="/images/Karen.jpg"
+          bio="Lab Manager"
         />
         <TeamCard
           name="Eugenia Flores"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          image="/images/Kena.jpg"
+          bio="Lab Technician"
         />
         <TeamCard
-          name="Amanda Oliver"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          name="Zhen-Mei Liu"
+          image="/images/Zhen-Mei Liu.jpg"
+          bio="Lab Technician"
         />
         <TeamCard
-          name="Amanda Oliver"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          name="Vugar Azizov"
+          image="/images/Vugar.jpg"
+          bio="Post-Doctoral Fellow"
         />
         <TeamCard
-          name="Amanda Oliver"
+          name="Michelle Chan-Seng-Yue"
           image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          bio="OICR Staff"
+        />
+        {/* Students */}
+        <TeamCard
+          name="Nikta Feizi"
+          image="/images/Nikta.jpg"
+          bio="Graduate Student"
         />
         <TeamCard
-          name="Amanda Oliver"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          name="Yuanchang Fang"
+          image="/images/YCF.jpg"
+          bio="Graduate Student"
         />
         <TeamCard
-          name="Amanda Oliver"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          name="Sabrina Ge"
+          image="/images/Sabrina.jpg"
+          bio="Graduate Student"
         />
         <TeamCard
-          name="Amanda Oliver"
-          image="public/images/Cameron.jpg"
-          bio="this is my biography"
+          name="Solomon Das"
+          image="/images/Solomon.jpg"
+          bio="Graduate Student"
+        />
+        <TeamCard
+          name="Linsey Gong"
+          image="/images/Linsey.jpg"
+          bio="Graduate Student"
+        />
+        <TeamCard
+          name="Dusan Vukmirovic"
+          image="/images/Dusan.jpg"
+          bio="Post-Doctoral Fellow"
+        />
+        <TeamCard
+          name="Genevie Tran"
+          image="/images/Genevie.jpg"
+          bio="Undergraduate Student"
         />
       </div>
     </main>
