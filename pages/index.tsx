@@ -182,11 +182,6 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-5">
-        <TeamCard
-          name="Cameron Zhang"
-          image="/images/Cameron.jpg"
-          bio="Undergraduate Student"
-        />
         {/* Post-Docs and staff */}
         <TeamCard
           name="Karen Ng"
@@ -212,6 +207,11 @@ export default function Home() {
           name="Michelle Chan-Seng-Yue"
           image="/images/Michelle.jpg"
           bio="OICR Staff"
+        />
+        <TeamCard
+          name="Milena Simone Gallucci"
+          image="/images/Milena.jpg"
+          bio="Lab Technician"
         />
         {/* Students */}
         <TeamCard
@@ -249,17 +249,27 @@ export default function Home() {
           image="/images/Keanu.jpg"
           bio="Undergraduate Student"
         />
+        <TeamCard
+          name="Janvi Tamakuwala"
+          image="/images/Janvi.jpg"
+          bio="Undergraduate Student"
+        />
+        <TeamCard
+          name="Cameron Zhang"
+          image="/images/Cameron.jpg"
+          bio="Undergraduate Student"
+        />
       </div>
       <div className="flex flex-col justify-center my-10 mx-60">
         <h2 id="contact" className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
           Contact Us
         </h2>
         <hr className="my-1" />
-        <p>
+        <p className="leading-7 [&:not(:first-child)]:my-6">
         We are always seeking motivated post-docs and young scientists to join our lab. 
         If you are interested in genomics, cancer development, and therapy resistance, 
         and have wet lab or bioinformatics experience, please send your CV and a brief cover
-         letter to faiyaz dot notta [at] gmail dot com. 
+         letter to faiyaz.notta@gmail.com. 
         </p>
       </div>
     </main>
