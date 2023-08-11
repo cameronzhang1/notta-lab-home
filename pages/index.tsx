@@ -1,7 +1,7 @@
 import TeamCard from "../components/teamcard";
-import TwitterFeed from "../components/twitterFeed";
+import TwitterWidget from "../components/twitterWidget";
 import Image from "next/image";
-import Faiyaz from "../public/images/pancurx-faiyaz.jpg";
+import Faiyaz from "../public/images/Faiyaz2.jpg";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Publication from "../components/publication";
 
@@ -9,19 +9,15 @@ export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col justify-between`}>
       <ParallaxBanner
-        layers={[
-          { image: "/images/20210831_NottaLabs.jpg", speed: -20 },
-          {
-            /* TODO: darken image */
-          },
-        ]}
+        id="home"
+        layers={[{ image: "/images/20210831_NottaLabs.jpg", speed: -20 }]}
         className="aspect-[2.7/1]"
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-9xl text-white font-bold">Notta Lab</h1>
         </div>
       </ParallaxBanner>
-      <div className="flex flex-col justify-center my-10 ml-60 mr-10">
+      <div className="flex flex-col justify-center my-10 ml-40 mr-10">
         <div className="grid grid-cols-3 gap-4 my-6">
           <div className="col-span-2">
             <h2
@@ -37,7 +33,7 @@ export default function Home() {
               the University of Toronto. Our lab is part of the{" "}
               <a
                 href="https://oicr.on.ca/research-portfolio/pancurx/"
-                className="font-medium text-primary underline underline-offset-4"
+                className="hover-underline-animation font-medium"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -57,12 +53,20 @@ export default function Home() {
               Pancreatic cancer is the fourth leading cause of cancer death in
               Canada. Most patients present with metastatic disease, do not
               benefit from surgery, and respond poorly to chemotherapy. Our
-              group, as part of PanCuRx, launched the COMPASS (Comprehensive
-              Molecular Characterization of Advanced Pancreatic Ductal
-              Adenocarcinoma) trial in 2016, which has resulted in the largest
-              international repository of genomes and transcriptomes from
-              late-stage pancreatic cancer. We work in close conjunction with
-              clinicians to understand the evolution of pancreatic cancer
+              group, as part of PanCuRx, launched the&nbsp;
+              <a
+                href="https://clincancerres.aacrjournals.org/content/24/6/1344.long"
+                className="hover-underline-animation font-medium"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                COMPASS
+              </a>{" "}
+              (Comprehensive Molecular Characterization of Advanced Pancreatic
+              Ductal Adenocarcinoma) trial in 2016, which has resulted in the
+              largest international repository of genomes and transcriptomes
+              from late-stage pancreatic cancer. We work in close conjunction
+              with clinicians to understand the evolution of pancreatic cancer
               through diverse experimental models and high-quality
               bioinformatics.
             </p>
@@ -151,16 +155,16 @@ export default function Home() {
             </h2>
             <hr className="my-1" />
             <div className="my-5">
-              <div className="float-left mx-10">
+              <div className="float-right mx-5">
                 <Image
                   src={Faiyaz}
-                  height={463}
-                  width={343}
+                  height={300}
+                  width={300}
                   alt="Faiyaz Notta"
-                  className="rounded-md"
+                  className="rounded-sm"
                 />
               </div>
-              <div className="my-5">
+              <div className="my-5 grid">
                 <h3 className="text-2xl font-semibold">
                   Faiyaz Notta - Principal Investigator
                 </h3>
@@ -177,7 +181,7 @@ export default function Home() {
                   Research&nbsp;
                   <a
                     href="https://oicr.on.ca/research-portfolio/pancurx/"
-                    className="font-medium text-primary underline underline-offset-4"
+                    className="hover-underline-animation font-medium"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -191,84 +195,102 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <TwitterFeed />
+          <TwitterWidget />
         </div>
-        
       </div>
 
       <div className="grid grid-cols-5">
         {/* Post-Docs and staff */}
-        <TeamCard name="Karen Ng" image="/images/Karen.jpg" bio="Lab Manager" />
+        <TeamCard
+          name="Karen Ng"
+          image="/images/Karen.JPG"
+          bio="Lab Manager"
+          link="/Karen"
+        />
         <TeamCard
           name="Eugenia Flores"
-          image="/images/Kena.jpg"
+          image="/images/Kena.JPG"
           bio="Lab Technician"
+          link="/Eugenia"
         />
         <TeamCard
           name="Zhen-Mei Liu"
-          image="/images/Zhen-Mei Liu.jpg"
+          image="/images/Zhen-Mei Liu.JPG"
           bio="Lab Technician"
+          link="/Zhen-Mei"
         />
         <TeamCard
           name="Vugar Azizov"
           image="/images/Vugar.jpg"
           bio="Post-Doctoral Fellow"
+          link="/Vugar"
         />
         <TeamCard
           name="Michelle Chan-Seng-Yue"
           image="/images/Michelle.jpg"
           bio="OICR Staff"
+          link="/Michelle"
         />
         <TeamCard
           name="Milena Simone Gallucci"
-          image="/images/Milena.jpg"
+          image="/images/Milena.JPG"
           bio="Lab Technician"
+          link="/Milena"
         />
         {/* Students */}
         <TeamCard
           name="Nikta Feizi"
           image="/images/Nikta.jpg"
           bio="Graduate Student"
+          link="/Nikta"
         />
         <TeamCard
           name="Yuanchang Fang"
-          image="/images/YCF.jpg"
+          image="/images/YCF.JPG"
           bio="Graduate Student"
+          link="/Yuanchang"
         />
         <TeamCard
           name="Sabrina Ge"
           image="/images/Sabrina.jpg"
           bio="Graduate Student"
+          link="/Sabrina"
         />
         <TeamCard
           name="Soloman Das"
           image="/images/Soloman.jpg"
           bio="Graduate Student"
+          link="/Soloman"
         />
         <TeamCard
           name="Dusan Vukmirovic"
           image="/images/Dusan.jpg"
           bio="Post-Doctoral Fellow"
+          link="/Dusan"
         />
         <TeamCard
           name="Genevie Tran"
-          image="/images/Genevie.jpg"
+          image="/images/Genevie.JPG"
           bio="Undergraduate Student"
+          link="/Genevie"
         />
         <TeamCard
           name="Keanu Herzog"
-          image="/images/Keanu.jpg"
+          image="/images/Keanu.JPG"
           bio="Undergraduate Student"
+          link="/Keanu"
         />
         <TeamCard
           name="Janvi Tamakuwala"
-          image="/images/Janvi.jpg"
+          image="/images/Janvi.JPG"
           bio="Undergraduate Student"
+          link="/Janvi"
         />
         <TeamCard
           name="Cameron Zhang"
           image="/images/Cameron.jpg"
           bio="Undergraduate Student"
+          link="/Cameron"
         />
       </div>
       <div className="flex flex-col justify-center my-10 mx-60">

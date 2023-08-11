@@ -3,9 +3,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "../public/images/main-logo.png";
 import NavItem from "./navitem";
-
+// TODO: center navbar
 const MENU_LIST = [
-  { text: "Home", href: "/" },
+  { text: "Home", href: "/#home" },
   { text: "About Us", href: "/#about" },
   { text: "Publications", href: "/#publications" },
   { text: "Team", href: "/#team" },

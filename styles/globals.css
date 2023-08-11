@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+html{scroll-behavior:smooth}
+
+h2 {
+  color: #513484;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -77,22 +83,6 @@
   }
 }
 
-.embla__container  {
-  margin: auto;
-  display: flex;
-  grid-auto-flow: row;
-  grid-auto-rows: 80%; /* Each slide covers 80% of the viewport */
-  height: 200px;
-}
-
-.embla__slide {
-  flex: 0 0 80%; /* Slide covers 80% of the viewport */
-  height: 200px;
-  min-width: 0;
-  max-width: 100%; /* Prevent from growing larger than viewport */
-  max-height: 100%; /* Prevent from growing larger than viewport */
-}
-
 header{
   position: sticky;
   z-index: 30;
@@ -129,13 +119,13 @@ nav{
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #fff;
 }
 .nav__menu-list.active{
   right: 0;
 }
 .nav__link{
   font-size: 18px; 
+  color: #513484;
   position: relative;
   transition: all 0.2s;
 }
@@ -169,11 +159,36 @@ nav{
     height: 6px;
     bottom: -16px;
     left: 0;
-    background-color: black;
+    background-color: #513484;
     transition: all 0.2s;
   }
   
   .nav__link:hover:before{
    width: 100%;
   }
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: 
+#513484;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: 
+#513484;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
