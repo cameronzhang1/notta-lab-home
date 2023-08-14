@@ -1,0 +1,47 @@
+import Link from "next/link";
+import Image from "next/image";
+import React, { useState } from "react";
+import Logo from "../public/images/main-logo.png";
+import NavItem from "./navitem";
+// TODO: center navbar
+const MENU_LIST = [
+  { text: "Home", href: "/#home" },
+  { text: "About Us", href: "/#about" },
+  { text: "Publications", href: "/#publications" },
+  { text: "Team", href: "/#team" },
+  { text: "Contact", href: "/#contact" },
+];
+const Navbar = () => {
+  const [navActive, setNavActive] = useState(null);
+  const [activeIdx, setActiveIdx] = useState(-1);
+
+  return (
+    <header>
+      <nav className={"nav"}>
+        <Link href={"/"} className= "mx-5">
+          <Image src={Logo} height={50}width={50}alt="Notta Lab" className="max-w-xs transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30"/>
+        </Link>
+        <div
+          onClick={() => setNavActive(!navActive)}
+          className={`nav__menu-bar`}
+        >
+        </div>
+        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+          {MENU_LIST.map((menu, idx) => (
+            <div
+              onClick={() => {
+                setActiveIdx(idx);
+                setNavActive(false);
+              }}
+              key={menu.text}
+            >
+              <NavItem active={activeIdx === idx} {...menu} />
+            </div>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
