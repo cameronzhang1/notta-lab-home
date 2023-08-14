@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className={"nav"}>
-        <Link href={"/"} className= "mx-10">
+        <Link href={"/"} className= "mx-5">
           <Image src={Logo} height={50}width={50}alt="Notta Lab" className="max-w-xs transition duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-black/30"/>
         </Link>
         <div

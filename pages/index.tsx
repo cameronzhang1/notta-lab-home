@@ -3,7 +3,7 @@ import TwitterWidget from "../components/twitterWidget";
 import Image from "next/image";
 import Faiyaz from "../public/images/Faiyaz2.jpg";
 import { ParallaxBanner } from "react-scroll-parallax";
-import Publication from "../components/publication";
+import Publications from "../components/publication";
 
 export default function Home() {
   return (
@@ -77,76 +77,14 @@ export default function Home() {
               Publications
             </h2>
             <hr className="my-1" />
-            <div className="grid grid-cols-2 gap-4 my-6">
-              <Publication
-                href="https://aacrjournals.org/clincancerres/article/26/18/4901/9541/GATA6-Expression-Distinguishes-Classical-and-Basal"
-                title={
-                  "GATA6 Expression Distinguishes Classical and Basal-like Subtypes in Advanced Pancreatic Cancer"
-                }
-                authors={"O’Kane GM et al. Clin Cancer Research (2020)"}
-              />
-              <Publication
-                href="https://www.nature.com/articles/s41588-019-0566-9"
-                title={
-                  "Transcription phenotypes of pancreatic cancer are driven by genomic events during tumor evolution"
-                }
-                authors={"Chan-Seng-Yue M, Kim JC, et al. Nat Genetics (2020)"}
-              />
-              <Publication
-                href="https://www.nature.com/articles/s41375-019-0546-1"
-                title={
-                  "Cryptic genomic lesions in adverse-risk acute myeloid leukemia identified by integrated whole genome and transcriptome sequencing"
-                }
-                authors={"Kalimuthu S et al. Gut (2019)"}
-              />
-              <Publication
-                href="https://gut.bmj.com/content/69/2/317.long"
-                title={
-                  "Morphological classification of pancreatic ductal adenocarcinoma that predicts molecular subtypes and correlates with clinical outcome"
-                }
-                authors={"Kim JC et al. Leukemia (2020)"}
-              />
-              <Publication
-                href="https://cancerdiscovery.aacrjournals.org/content/8/9/1112.long"
-                title={
-                  "Organoid Profiling Identifies Common Responders to Chemotherapy in Pancreatic Cancer"
-                }
-                authors={"Tiriac H et al. Cancer Discovery (2018)"}
-              />
-              <Publication
-                href="https://clincancerres.aacrjournals.org/content/24/6/1344.long"
-                title={
-                  "Genomics-Driven Precision Medicine for Advanced Pancreatic Cancer: Early Results from the COMPASS Trial"
-                }
-                authors={"Aung KL. et al. Clin Cancer Research (2018)"}
-              />
-              <Publication
-                href="https://gut.bmj.com/content/66/12/2170.long"
-                title={"A genetic roadmap of pancreatic cancer: still evolving"}
-                authors={"Notta F. et al. Gut (2017)"}
-              />
-              <Publication
-                href="https://www.nature.com/articles/nature19823"
-                title={
-                  "A renewed model of pancreatic cancer evolution based on genomic rearrangement patterns"
-                }
-                authors={"Notta F. et al. Science (2016)"}
-              />
-              <Publication
-                href="https://science.sciencemag.org/content/351/6269/aab2116.long"
-                title={
-                  "Distinct routes of lineage development reshape the humanblood hierarchy across ontogeny"
-                }
-                authors={"Notta F. et al. Science (2016)"}
-              />
+              <Publications />
+              {/* 
               <Publication
                 href="https://www.nature.com/articles/nature09733"
                 title={
                   "Evolution of human BCR-ABL1 lymphoblastic leukaemia-initiating cells"
                 }
-                authors={"Notta F. et al Nature (2011)"}
-              />
-            </div>
+                authors={"Notta F. et al Nature (2011)"} */}
             <h2
               id="team"
               className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10"
@@ -201,96 +139,97 @@ export default function Home() {
 
       <div className="grid grid-cols-5">
         {/* Post-Docs and staff */}
+        {/* TODO: refactor to const and map */}
         <TeamCard
           name="Karen Ng"
           image="/images/Karen.JPG"
           bio="Lab Manager"
-          link="/Karen"
+          link="/(people)/Karen"
         />
         <TeamCard
           name="Eugenia Flores"
           image="/images/Kena.JPG"
           bio="Lab Technician"
-          link="/Eugenia"
+          link="/(people)/Eugenia"
         />
         <TeamCard
           name="Zhen-Mei Liu"
           image="/images/Zhen-Mei Liu.JPG"
           bio="Lab Technician"
-          link="/Zhen-Mei"
+          link="/(people)/Zhen-Mei"
         />
         <TeamCard
           name="Vugar Azizov"
           image="/images/Vugar.jpg"
           bio="Post-Doctoral Fellow"
-          link="/Vugar"
+          link="/(people)/Vugar"
         />
         <TeamCard
           name="Michelle Chan-Seng-Yue"
-          image="/images/Michelle.jpg"
+          image="/images/placeholder.jpg"
           bio="OICR Staff"
-          link="/Michelle"
+          link="/(people)/Michelle"
         />
         <TeamCard
           name="Milena Simone Gallucci"
           image="/images/Milena.JPG"
           bio="Lab Technician"
-          link="/Milena"
+          link="/(people)/Milena"
         />
         {/* Students */}
         <TeamCard
           name="Nikta Feizi"
           image="/images/Nikta.jpg"
           bio="Graduate Student"
-          link="/Nikta"
+          link="/(people)/Nikta"
         />
         <TeamCard
           name="Yuanchang Fang"
           image="/images/YCF.JPG"
           bio="Graduate Student"
-          link="/Yuanchang"
+          link="/(people)/Yuanchang"
         />
         <TeamCard
           name="Sabrina Ge"
           image="/images/Sabrina.jpg"
           bio="Graduate Student"
-          link="/Sabrina"
+          link="/(people)/Sabrina"
         />
         <TeamCard
           name="Soloman Das"
           image="/images/Soloman.jpg"
           bio="Graduate Student"
-          link="/Soloman"
+          link="/(people)/Soloman"
         />
         <TeamCard
           name="Dusan Vukmirovic"
-          image="/images/Dusan.jpg"
+          image="/images/placeholder.jpg"
           bio="Post-Doctoral Fellow"
-          link="/Dusan"
+          link="/(people)/Dusan"
         />
         <TeamCard
           name="Genevie Tran"
           image="/images/Genevie.JPG"
           bio="Undergraduate Student"
-          link="/Genevie"
+          link="/(people)/Genevie"
         />
         <TeamCard
           name="Keanu Herzog"
           image="/images/Keanu.JPG"
           bio="Undergraduate Student"
-          link="/Keanu"
+          link="/(people)/Keanu"
         />
         <TeamCard
           name="Janvi Tamakuwala"
           image="/images/Janvi.JPG"
           bio="Undergraduate Student"
-          link="/Janvi"
+          link="/(people)/Janvi"
         />
         <TeamCard
           name="Cameron Zhang"
           image="/images/Cameron.jpg"
           bio="Undergraduate Student"
-          link="/Cameron"
+          link="/(people)/Cameron"
         />
       </div>
       <div className="flex flex-col justify-center my-10 mx-60">

@@ -113,9 +113,8 @@ nav{
   flex-direction: column;
   position: fixed;
   top: 60px;
-  width: 288px;
+  width: 28px;
   row-gap: 24px;
-  right: -288px;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
@@ -191,4 +190,9 @@ nav{
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

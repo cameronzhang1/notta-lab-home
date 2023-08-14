@@ -1,7 +1,6 @@
-// TODO: fix hydration error (seems to be needing the script to move to header?)
-// https://stackoverflow.com/questions/36852946/twitter-widget-not-always-loading
+// TODO: fix hydration error (may be unrelated to this component)
 
-import Head from "next/head";
+import Script from "next/script";
 
 export default function TwitterWidget() {
   return (
@@ -16,9 +15,7 @@ export default function TwitterWidget() {
       >
         Tweets by LabNotta
       </a>
-      <Head>
-      <script async src="https://platform.twitter.com/widgets.js"></script>
-      </Head>
+      <Script async src="https://platform.twitter.com/widgets.js"></Script>
     </div>
   );
 }

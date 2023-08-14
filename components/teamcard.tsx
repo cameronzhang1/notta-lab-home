@@ -11,6 +11,7 @@ export default function TeamCard({
   bio: string;
   link: string;
 }) {
+  // TODO: fix clickthrough bullshit overlay
   return (
     <a href={link}>
       <div className="overflow-hidden aspect-video bg-red-400 cursor-pointer rounded-xl relative group m-1">

@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-export default function Cameron() {
+export default function TeamMember() {
   return (
-    <div className="flex flex-col justify-center my-10 mx-60">
+    <div className="wrapper flex flex-col my-10 mx-60 min-h-full">
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
         Cameron Zhang
       </h2>
@@ -31,6 +31,7 @@ export default function Cameron() {
             className="rounded-lg shadow-lg"
             width={350}
             height={500}
+            quality={100}
           />
         </div>
       </div>
