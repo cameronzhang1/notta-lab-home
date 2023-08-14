@@ -16,7 +16,7 @@ export default function TeamMember() {
             embarked on a journey to Toronto to pursue my university education.
             I am currently enrolled in my final year of the Biomedical Sciences
             Undergraduate Co-op Program at Toronto Metropolitan University.
-            Thanks to this program, I've had the honour of working at the
+            Thanks to this program, I&apos;ve had the honour of working at the
             University Health Network since January 2022.
             <br></br>
             <br></br>Throughout my time here, I have assumed a number of diverse

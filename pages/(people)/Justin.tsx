@@ -13,7 +13,7 @@ export default function TeamMember() {
         <div>
           <p>
             Life, to me, is an eternal pursuit of new horizons. Upon
-            successfully completing my Bachelor's degree in Science, I was
+            successfully completing my Bachelor&apos;s degree in Science, I was
             granted an opportunity to work in an immunotherapy research
             laboratory at The Chinese University of Hong Kong, where I had the
             chance to interact with different esteemed researchers and gained
@@ -27,7 +27,7 @@ export default function TeamMember() {
             and immunofluorescence experiments and performing in-depth analyses.
             <br></br><br></br>My passion for exploration extends beyond scientific pursuits to
             traversing the globe and savoring diverse cuisines of various
-            nations. I find that the term "foodie" perfectly describes my deep
+            nations. I find that the term &quot;foodie&quot; perfectly describes my deep
             appreciation for delights from around the world.
           </p>
         </div>
