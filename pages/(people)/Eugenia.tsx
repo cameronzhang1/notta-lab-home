@@ -29,7 +29,7 @@ export default function TeamMember() {
             and assist with grants and papers. <br></br>
             <br></br>Whenever I am not in the lab, you can find me with my kids
             and on tennis courts. I love to travel, organize events, take
-            pictures of people and value friendships.
+            portraits and value friendships.
           </p>
         </div>
         <div>
