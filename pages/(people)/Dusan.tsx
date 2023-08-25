@@ -42,7 +42,7 @@ export default function TeamMember() {
         </div>
         <div>
           <Image
-            src="/images/placeholder.jpg"
+            src="/images/DusaN.jpg"
             alt="Dusan Vukmirovic"
             className="rounded-lg shadow-lg"
             width={350}

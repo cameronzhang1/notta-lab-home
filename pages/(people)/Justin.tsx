@@ -33,7 +33,7 @@ export default function TeamMember() {
         </div>
         <div>
           <Image
-            src="/images/placeholder.jpg"
+            src="/images/Justin.jpg"
             alt="Justin Chung"
             className="rounded-lg shadow-lg"
             width={350}

@@ -130,7 +130,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-5">
+      <div className="grid grid-cols-4">
         {/* Post-Docs and staff */}
         {/* TODO: refactor to const and map */}
         <TeamCard
@@ -196,7 +196,7 @@ export default function Home() {
         />
         <TeamCard
           name="Dusan Vukmirovic"
-          image="/images/Dusan.jpg"
+          image="/images/DusaN.jpg"
           bio="Post-Doctoral Fellow"
           link="/(people)/Dusan"
         />
@@ -217,6 +217,12 @@ export default function Home() {
           image="/images/Janvi.JPG"
           bio="Undergraduate Student"
           link="/(people)/Janvi"
+        />
+        <TeamCard
+          name="Justin Chung"
+          image="/images/Justin.JPG"
+          bio="Undergraduate Student"
+          link="/(people)/Justin"
         />
         <TeamCard
           name="Cameron Zhang"
