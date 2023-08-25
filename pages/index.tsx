@@ -4,6 +4,7 @@ import Image from "next/image";
 import Faiyaz from "../public/images/Faiyaz2.jpg";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Publications from "../components/publication";
+import NewsFeed from "../components/newsfeed";
 
 export default function Home() {
   return (
@@ -37,13 +38,13 @@ export default function Home() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Pancreatic Cancer Translational Research Initiative (PanCuRx)
-              </a>{" "}
-              at the Ontario Institute for Cancer Research. The Notta Lab has
-              made important contributions to the understanding of pancreatic
-              cancer evolution and disease subtypes. Our lab employs genomic,
-              cell biology and single-cell approaches to decipher new molecular
-              targets needed to treat pancreatic cancer.
+                Pancreatic Cancer Translational Research Initiative
+              </a>
+              &nbsp; (PanCuRx) at the Ontario Institute for Cancer Research. The
+              Notta Lab has made important contributions to the understanding of
+              pancreatic cancer evolution and disease subtypes. Our lab employs
+              genomic, cell biology and single-cell approaches to decipher new
+              molecular targets needed to treat pancreatic cancer.
             </p>
             <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10">
               Our Research
@@ -74,17 +75,10 @@ export default function Home() {
               id="publications"
               className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
             >
-              Publications
+              Selected Publications
             </h2>
             <hr className="my-1" />
-              <Publications />
-              {/* 
-              <Publication
-                href="https://www.nature.com/articles/nature09733"
-                title={
-                  "Evolution of human BCR-ABL1 lymphoblastic leukaemia-initiating cells"
-                }
-                authors={"Notta F. et al Nature (2011)"} */}
+            <Publications />
             <h2
               id="team"
               className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10"
@@ -133,11 +127,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <TwitterWidget />
+          <div>
+            <NewsFeed />
+            <TwitterWidget />
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-5">
+      <div className="grid grid-cols-4">
         {/* Post-Docs and staff */}
         {/* TODO: refactor to const and map */}
         <TeamCard
@@ -203,7 +200,7 @@ export default function Home() {
         />
         <TeamCard
           name="Dusan Vukmirovic"
-          image="/images/placeholder.jpg"
+          image="/images/DusaN.jpg"
           bio="Post-Doctoral Fellow"
           link="/(people)/Dusan"
         />
@@ -226,6 +223,12 @@ export default function Home() {
           link="/(people)/Janvi"
         />
         <TeamCard
+          name="Justin Chung"
+          image="/images/Justin.JPG"
+          bio="Undergraduate Student"
+          link="/(people)/Justin"
+        />
+        <TeamCard
           name="Cameron Zhang"
           image="/images/Cameron.jpg"
           bio="Undergraduate Student"
@@ -245,7 +248,18 @@ export default function Home() {
           our lab. If you are interested in genomics, cancer development, and
           therapy resistance, and have wet lab or bioinformatics experience,
           please send your CV and a brief cover letter to
-          faiyaz.notta@gmail.com.
+          faiyaz.notta@gmail.com.<br></br>
+          <br></br>
+          The Notta Lab is currently looking to hire a post-doctorate fellow.
+          Please&nbsp;
+          <a
+            href="https://www.recruitingsite.com/csbsites/uhncareers/JobDescription.asp?SiteID=10031&JobNumber=923501"
+            className="hover-underline-animation font-medium"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            apply via UHN here.
+          </a>
         </p>
       </div>
     </main>
